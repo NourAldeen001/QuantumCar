@@ -24,7 +24,7 @@ public class CarFactory {
         switch(engineType) {
             case GAS: return new GasEngine();
             case ELECTRIC: return new ElectricEngine();
-            case HYBRID: return new HybridEngine();
+            case HYBRID: return new HybridEngine(new GasEngine(), new ElectricEngine());
             default: throw new IllegalArgumentException("Unknown engine type");
         }
     }

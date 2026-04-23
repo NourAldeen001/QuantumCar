@@ -11,9 +11,14 @@ package quantum_car;
  */
 public class HybridEngine implements Engine {
     
-    private GasEngine gasEngine = new GasEngine();
-    private ElectricEngine electricEngine = new ElectricEngine();
+    private GasEngine gasEngine;
+    private ElectricEngine electricEngine;
     private int speed = 0;
+
+    public HybridEngine(GasEngine gasEngine, ElectricEngine electricEngine) {
+        this.gasEngine = gasEngine;
+        this.electricEngine = electricEngine;
+    }
     
     @Override
     public void increase() {
